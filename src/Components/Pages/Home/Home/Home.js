@@ -1,12 +1,12 @@
 import React from 'react';
-import Calender from '../../Shared/Calender/Calender';
+import Dashboard from '../../Dashboard/Dashboard/Dashboard';
 import Header from '../Header/Header';
 
 const Home = () => {
     return (
         <div>
             <Header></Header>
-            <Calender></Calender>
+            <Dashboard></Dashboard>
         </div>
     );
 };
