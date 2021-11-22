@@ -5,7 +5,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-// import AlarmIcon from '@mui/icons-material/Alarm'
+import AlarmIcon from '@mui/icons-material/Alarm'
 import IconButton from '@mui/material/IconButton';
 import ModalPaper from '../ModalPaper/ModalPaper';
 
@@ -21,9 +21,9 @@ const Papers = ({date}) => {
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           now {date.toLocaleString()}
-          {/* <IconButton color="secondary" aria-label="add an alarm">
+          <IconButton color="secondary" aria-label="add an alarm">
         <AlarmIcon />
-      </IconButton> */}
+      </IconButton>
         </Typography>
         <Typography  color="text.secondary" variant="h6" component="div">
           la lala lala -_-

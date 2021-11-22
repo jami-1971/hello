@@ -35,7 +35,7 @@ const ModalPaper = ({open, handleClose, handleOpen, date})=> {
       date : date.toLocaleString()
     }
     // send to the server
-    fetch('', {
+    fetch('https://dry-peak-44721.herokuapp.com/likha', {
       method: 'POST',
       headers: {
         'content-type':'application/json'
@@ -44,10 +44,10 @@ const ModalPaper = ({open, handleClose, handleOpen, date})=> {
     })
     .then(res => res.json())
     .then(data =>{
-      
+      handleClose();
     })
 
-    handleClose();
+    
     e.preventDefault();
     }
   return (  
