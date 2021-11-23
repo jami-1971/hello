@@ -13,11 +13,11 @@ const Likha = ({date}) => {
     const [likha, setLikha] = useState([]);
 
     useEffect(()=>{
-        const url = `https://dry-peak-44721.herokuapp.com/likha?email=${user.email}`;
+        const url = `https://dry-peak-44721.herokuapp.com/likha?email=${user.email}&date=${date.toLocaleDateString()}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setLikha(data))
-    },[date])
+    },[date, user.email])
     return (
         <div>
             <h2>{likha.length}</h2>
@@ -39,7 +39,7 @@ const Likha = ({date}) => {
               <TableCell component="th" scope="row">
                 {/* {row.date} */}
               </TableCell>
-              <TableCell align="right">{user.email}</TableCell>
+              <TableCell align="right">{row.pora}</TableCell>
               <TableCell align="right">{row.UsWritings}</TableCell>
             </TableRow>
           ))}
@@ -51,3 +51,5 @@ const Likha = ({date}) => {
 };
 
 export default Likha;
+
+// ber korsi onk kisu . ekhn email add kora lagbe  and then query kaj korbe

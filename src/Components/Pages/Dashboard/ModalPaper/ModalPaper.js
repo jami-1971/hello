@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-
+// import useAuth from '../../../hooks/useAuth'
 
 const style = {
   position: 'absolute',
@@ -17,9 +17,10 @@ const style = {
   p: 4,
 };
 
-const ModalPaper = ({open, handleClose, handleOpen, date})=> {
+const ModalPaper = ({open, handleClose, handleOpen, date, user})=> {
+  // const {user} = useAuth()
   // const initialInfo ={pora: 'ghumaisi -_-', UsWritings: ''  }
-  const [bookingInfo, setBookingInfo] = useState    ({});
+  const [bookingInfo, setBookingInfo] = useState({});
 
   const handleOnBlur = e =>{
     const field = e.target.name;
@@ -32,8 +33,10 @@ const ModalPaper = ({open, handleClose, handleOpen, date})=> {
     //collect data
     const likha = {
       ...bookingInfo,
-      date : date.toLocaleString()
+      email : user?.email,
+      date : date.toLocaleDateString()
     }
+    // console.log(likha)
     // send to the server
     fetch('https://dry-peak-44721.herokuapp.com/likha', {
       method: 'POST',
@@ -44,6 +47,7 @@ const ModalPaper = ({open, handleClose, handleOpen, date})=> {
     })
     .then(res => res.json())
     .then(data =>{
+      // console.log(data)
       handleClose();
     })
 
@@ -61,11 +65,19 @@ const ModalPaper = ({open, handleClose, handleOpen, date})=> {
         <form onSubmit={handleSubmit}> 
         <TextField
           disabled
-          sx={{width:'90%', mb:2, mt:1}}
+          sx={{width:'60%', mb:1, mt:1}}
           id="outlined-size-small"
           label=""
           rows={4}
-          defaultValue={date.toLocaleString()}
+          defaultValue={date.toLocaleDateString()}
+        /> 
+        <TextField
+          disabled
+          sx={{width:'60%', mb:1}}
+          id="outlined-size-small"
+          label=""
+          rows={4}
+          defaultValue={user?.email}
         /> 
         <TextField
           required
@@ -79,7 +91,7 @@ const ModalPaper = ({open, handleClose, handleOpen, date})=> {
         />
           <TextField
           required
-          sx={{mt:3, width:'90%'}}
+          sx={{mt:1, width:'90%'}}
           id="outlined-multiline-static"
           label="butuputuuuuuu"
           rows={4}

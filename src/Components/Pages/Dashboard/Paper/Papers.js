@@ -8,11 +8,13 @@ import Typography from '@mui/material/Typography';
 import AlarmIcon from '@mui/icons-material/Alarm'
 import IconButton from '@mui/material/IconButton';
 import ModalPaper from '../ModalPaper/ModalPaper';
+import useAuth from '../../../hooks/useAuth'
 
 const Papers = ({date}) => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const {user} =  useAuth();
 
     return (
        <>
@@ -50,6 +52,7 @@ const Papers = ({date}) => {
        open={open}
        handleOpen={handleOpen}
        handleClose={handleClose}
+       user={user}
        ></ModalPaper>
        
        </>
