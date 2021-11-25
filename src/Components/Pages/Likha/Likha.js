@@ -22,7 +22,7 @@ const Likha = ({date}) => {
         <div>
             <h2>{likha.length}</h2>
             <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="pa pappa pa">
+      <Table sx={{ minWidth: 650 }} aria-label="pa rappa pa">
         <TableHead>
           <TableRow>
             <TableCell>Date</TableCell>
@@ -37,7 +37,7 @@ const Likha = ({date}) => {
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {/* {row.date} */}
+                {row.date}
               </TableCell>
               <TableCell align="right">{row.pora}</TableCell>
               <TableCell align="right">{row.UsWritings}</TableCell>

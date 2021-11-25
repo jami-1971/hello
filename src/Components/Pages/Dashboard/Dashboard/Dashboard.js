@@ -2,6 +2,8 @@ import { Grid , Container} from '@mui/material';
 import React from 'react';
 import Calender from '../../Shared/Calender/Calender';
 import Papers from '../Paper/Papers';
+import us from '../../../../images.jpg'
+import './Dashboard.css'
 
 const Dashboard = () => {
     const [date, setDate] = React.useState(new Date());
@@ -12,7 +14,7 @@ const Dashboard = () => {
           <Calender date={date} setDate={setDate}></Calender>
         </Grid>
         <Grid item xs={12} md={7}>
-        <h2>{date.toDateString()}</h2>
+          <img className="image" src={us} alt="" />
         </Grid>
         </Grid>
         <Papers date={date}></Papers>

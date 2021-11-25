@@ -14,7 +14,7 @@ const Papers = ({date}) => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const {user} =  useAuth();
+    const {user, googleSignIn} =  useAuth();
 
     return (
        <>
@@ -37,7 +37,7 @@ const Papers = ({date}) => {
         <Typography variant="h10" color="text.secondary">
             butuputu
           <br />
-          <Button sx={{mt: 5}} onClick={handleOpen} variant="contained">Contained</Button>
+          {user.email ? <Button sx={{mt: 5}} onClick={handleOpen} variant="contained" color="success">Aii</Button> : <Button sx={{mt: 5}} onClick={googleSignIn} variant="outlined" color="error">Contained</Button>}
           
         </Typography>
       </CardContent>

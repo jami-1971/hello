@@ -1,3 +1,7 @@
 .Navbar {
     background-color: #065F46;
 }
+
+.NavBar a {
+    text-decoration: none;
+}

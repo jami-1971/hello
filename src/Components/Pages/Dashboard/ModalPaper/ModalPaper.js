@@ -73,7 +73,7 @@ const ModalPaper = ({open, handleClose, handleOpen, date, user})=> {
         /> 
         <TextField
           disabled
-          sx={{width:'60%', mb:1}}
+          sx={{width:'90%', mb:1}}
           id="outlined-size-small"
           label=""
           rows={4}
@@ -92,14 +92,16 @@ const ModalPaper = ({open, handleClose, handleOpen, date, user})=> {
           <TextField
           required
           sx={{mt:1, width:'90%'}}
-          id="outlined-multiline-static"
+          id="standard-multiline-static"
           label="butuputuuuuuu"
           rows={4}
+          color="secondary"
           name="UsWritings"
           onBlur={handleOnBlur}
           defaultValue=""
           placeholder="umm..."
-        /> <br />
+          variant="standard"
+        />
         
         <Button sx={{mt: 5, mx:3}} onClick={handleSubmit} variant="contained">tluck</Button>
         </form>
