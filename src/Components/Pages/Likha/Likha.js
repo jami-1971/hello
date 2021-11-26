@@ -22,7 +22,7 @@ const Likha = ({date}) => {
         <div>
             <h2>{likha.length}</h2>
             <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="pa rappa pa">
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>Date</TableCell>

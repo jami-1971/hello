@@ -8,7 +8,8 @@ import StaticDatePicker from '@mui/lab/StaticDatePicker';
 const Calender = ({date, setDate}) => {
     
     return (
-        <LocalizationProvider dateAdapter={AdapterDateFns}>
+        <div className="rounded-5">
+            <LocalizationProvider dateAdapter={AdapterDateFns} >
     <StaticDatePicker
         orientation="landscape"
         openTo="day"
@@ -19,7 +20,8 @@ const Calender = ({date, setDate}) => {
         }}
         renderInput={(params) => <TextField {...params} />}
     />
-    </LocalizationProvider> 
+    </LocalizationProvider>
+        </div> 
     );
 };
 

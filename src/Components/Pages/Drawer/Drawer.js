@@ -83,7 +83,7 @@ const UsMoments = (props) => {
                 <MenuIcon />
               </IconButton>
               <Typography variant="h6" noWrap component="div">
-                Responsive drawer
+                Secreeeet
               </Typography>
             </Toolbar>
           </AppBar>
@@ -126,13 +126,13 @@ const UsMoments = (props) => {
             <Toolbar />
             <Typography paragraph>
               <Grid container spacing={2}>
-                <Grid item xs={5}>
+                <Grid item xs={12}>
                 <Calender
                 date={date}
                 setDate={setDate}
                 ></Calender>
                 </Grid>
-                <Grid item xs={7}>
+                <Grid item xs={12}>
                   <Likha
                   date={date}
                   ></Likha>

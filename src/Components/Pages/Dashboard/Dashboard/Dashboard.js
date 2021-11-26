@@ -9,7 +9,7 @@ const Dashboard = () => {
     const [date, setDate] = React.useState(new Date());
     return (
         <Container>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} className="m-5">
         <Grid item xs={12} md={5}>
           <Calender date={date} setDate={setDate}></Calender>
         </Grid>
@@ -17,7 +17,7 @@ const Dashboard = () => {
           <img className="image" src={us} alt="" />
         </Grid>
         </Grid>
-        <Papers date={date}></Papers>
+        <Papers date={date} ></Papers>
         </Container>
     );
 };
