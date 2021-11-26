@@ -1,5 +1,5 @@
 import React from 'react';
-import isWeekend from 'date-fns/isWeekend';
+// import isWeekend from 'date-fns/isWeekend';
 import TextField from '@mui/material/TextField';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
@@ -14,7 +14,7 @@ const Calender = ({date, setDate}) => {
         orientation="landscape"
         openTo="day"
         date={date}
-        shouldDisableDate={isWeekend}
+        // shouldDisableDate={isWeekend}
         onChange={(newdate) => {
         setDate(newdate);
         }}
