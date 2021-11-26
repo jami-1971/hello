@@ -15,7 +15,7 @@ const Header = () => {
                 <Navbar.Collapse className="justify-content-end text-white">
                     <Navbar.Text className="text-white">
                     {user.email ? <>Signed in as: <a href="#login">{user.displayName}</a> <Button sx={{mt: 5}} onClick={logout} variant="light">Log out</Button> <NavLink to="/drawer"><Button variant="light">Us</Button></NavLink></> : <Button onClick={googleSignIn} variant="light">Get In</Button>}
-                    
+                    {/* <Button onClick={handleClick('bottom-end')}>bottom-end</Button> */}
                     </Navbar.Text>
                 </Navbar.Collapse>
                 </Container>
