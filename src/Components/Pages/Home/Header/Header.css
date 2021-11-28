@@ -1,7 +1,12 @@
 .Navbar {
-    background-color: #818CF8;
+    background-color: #4F46E5;
 }
 
-.NavBar a {
+.abc {
     text-decoration: none;
+    color: #881337;
+}
+
+.button:hover {
+    background-color: #84CC16;
 }

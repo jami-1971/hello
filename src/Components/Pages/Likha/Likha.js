@@ -26,6 +26,7 @@ const Likha = ({date}) => {
         <TableHead>
           <TableRow>
             <TableCell>Date</TableCell>
+            <TableCell align="right">email</TableCell>
             <TableCell align="right">ki ki polsi</TableCell>
             <TableCell align="right">na kisu na</TableCell>
           </TableRow>
@@ -39,6 +40,7 @@ const Likha = ({date}) => {
               <TableCell component="th" scope="row">
                 {row.date}
               </TableCell>
+              <TableCell align="right">{row.email}</TableCell>
               <TableCell align="right">{row.pora}</TableCell>
               <TableCell align="right">{row.UsWritings}</TableCell>
             </TableRow>

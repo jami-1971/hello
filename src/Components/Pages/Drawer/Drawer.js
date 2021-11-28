@@ -18,6 +18,7 @@ import Typography from '@mui/material/Typography';
 import {Container, Grid} from '@mui/material';
 import Calender from '../Shared/Calender/Calender';
 import Likha from '../Likha/Likha';
+import { FaSmileWink, FaYoutube, FaGlassCheers, FaGlasses , FaMehBlank, FaSquareRootAlt, FaPalette, FaPizzaSlice, FaTired} from "react-icons/fa";
 
 const drawerWidth = 200;
 
@@ -36,7 +37,7 @@ const UsMoments = (props) => {
       <Toolbar />
       <Divider />
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        {[<FaGlassCheers />, <FaGlasses />, <FaMehBlank />, <FaSquareRootAlt />].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -47,7 +48,7 @@ const UsMoments = (props) => {
       </List>
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+        {[<FaPalette />, <FaPizzaSlice />, <FaTired />].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -63,7 +64,7 @@ const UsMoments = (props) => {
 
     return (
         <Container>
-            <Box sx={{ display: 'flex' }}>
+            <Box sx={{ display: 'flex' }}> 
           <CssBaseline />
           <AppBar
             position="fixed"
@@ -80,10 +81,11 @@ const UsMoments = (props) => {
                 onClick={handleDrawerToggle}
                 sx={{ mr: 2, display: { sm: 'none' } }}
               >
-                <MenuIcon />
+                <FaYoutube />
               </IconButton>
               <Typography variant="h6" noWrap component="div">
-                Secreeeet
+                Secreeeet <FaSmileWink />
+
               </Typography>
             </Toolbar>
           </AppBar>

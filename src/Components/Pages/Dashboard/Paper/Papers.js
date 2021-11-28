@@ -9,6 +9,8 @@ import AlarmIcon from '@mui/icons-material/Alarm'
 import IconButton from '@mui/material/IconButton';
 import ModalPaper from '../ModalPaper/ModalPaper';
 import useAuth from '../../../hooks/useAuth'
+import { FaMeh } from 'react-icons/fa';
+
 import './Papers.css'
 
 const Papers = ({date}) => {
@@ -29,7 +31,7 @@ const Papers = ({date}) => {
       </IconButton>
         </Typography>
         <Typography  color="text.secondary" variant="h6" component="div">
-          la lala lala -_-
+          la lala lala v<FaMeh />s pa rappa pa
         </Typography>
         <Typography sx={{ mb: 1.5 }} variant="h5" >
           wake wake wake <br />
